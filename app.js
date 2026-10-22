@@ -1,9 +1,13 @@
 const express = require("express");
+const cors = require("cors");
 const dbconnect = require("./config/db");
 const productosRoutes = require("./routes/productos");
+const corsOptions = require("./config/corsOptions");
 
 const app = express();
 const PORT = 3000;
+
+app.use(cors(corsOptions));
 
 // Permite recibir información en formato JSON.
 app.use(express.json());
