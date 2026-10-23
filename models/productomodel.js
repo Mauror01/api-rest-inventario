@@ -26,6 +26,10 @@ const productoSchema = new Schema({
     type: String,
   },
 
+  imagen: {
+    type: String,
+  },
+
   fechaIngreso: {
     type: Date,
     default: Date.now,
